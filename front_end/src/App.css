@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    font-size: 20px;
+    margin-left: 45px;
+}
+
+body {
+    background-color: rgba(2, 5, 15, 0.918);
+}
+
+form {
+    margin: 0px 70px;
+    height: 100vh;
+    padding:  50px 0px;
+
+}
+
+.camps {
+    display: flex;
+    justify-content: space-between;
+}
+
+#campo1 {
+    height: 400px;
+    background-color: rgba(113, 113, 126, 0.178);
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttona {
+    margin-left: 850px;
+    margin-bottom: 10px;
+}
+
+#buttons {
+display: flex;
+justify-content: end;
+}
+
+#remove {
+    margin-right: 10px;
+}
+
+#boxes1 {
+    margin-top: 20px;
+    border: transparent;
+}
+
+#line2 {
+    margin-top:30px ;
+    padding: 0 45px;
+}
+
+#textareas {
+    margin-top: 30px;
+    padding: 0 45px;
+}
+
+
+#buttons {
+    margin-top:-5px;
+    margin-right: 45px;
+}
+
+.input {
+    border-radius: 8px;
+background: rgba(0, 0, 0, 0.568);
+height: 35px;
+display: block;
+border: none;
+}
+
+.area {
+    border-radius: 8px;
+background: rgba(0, 0, 0, 0.568);
+height: 100px;
+width: 550px;
+display: block;
+border: none;
+}
+
+button {
+    background-color: rgb(245, 139, 0);
+border: none;
+color: black;
+padding: 10px 30px;
+text-align: center;
+font-size: 14px;
+font-family: sans-serif;
+border-radius: 12px;
+}
+
+#name {
+    width: 700px;
+}
+
+#port {
+    width: 90px;
+}
+
+#cvss {
+    width: 90px;
+}
+
+#theat {
+    width: 90px;
+}  
+
+#box1 {
+    margin-left: 45px;
+}
+
+#box2 {
+margin-right: -45px;
+}
+
+fieldset{
+    border-radius: 8px;
+    border: none;
+}
+
+#nvt {
+    width: 350px;
+}
+
+#host {
+    width: 350px;
+}
+
+#family {
+    width: 350px;
+}
+
+#rep {
+    border-bottom: 1px solid rgb(245, 139, 0);
+    height: 25px;
+}
+
+.lsts {
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(113, 113, 126, 0.178);
+    border-left: 1px rgb(245, 139, 0) solid;
+    margin-top: 5px;
+}
+
+#res {
+    border-left: 1px rgb(245, 139, 0) solid;
+    margin-top: 5px;
+}
+
