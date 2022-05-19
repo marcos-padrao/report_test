@@ -2,13 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+
+    return (
       <header className="App-header">   
 
      <form>
 
     <div id = "top"> 
-      <div id = "rep">
+    <div id = "rep">
     <h1>Report</h1>
     </div>
 
@@ -51,17 +52,17 @@ function App() {
 
     <div>
     <label for="port">Port</label>
-    <input type="text" name="port" id="port" class = "input"></input>
+    <input type="text" name="port" id="port" class = "input1"></input>
     </div>
 
     <div>
     <label for="cvss" >Cvss_base</label>
-    <input type="text" name="cvss" id="cvss" class = "input"></input>
+    <input type="text" name="cvss" id="cvss" class = "input1"></input>
     </div>
 
     <div>
     <label for="theat">Threat</label>
-    <input type="text" name="theat" id="theat" class = "input"></input>
+    <input type="text" name="theat" id="theat" class = "input1"></input>
     </div>
 
     <div>
@@ -103,17 +104,20 @@ function App() {
 
     <fieldset id = "lists">
 
-    <div id = "list1" class = "lsts">xxx xxx xxx</div>
-    <div id = "list2" class = "lsts">xxx xxx xxx</div>
-    <div id = "list3" class = "lsts">xxx xxx xxx</div>
+    <div id = "list1" class = "lsts"></div>
+    <div id = "list2" class = "lsts"></div>
+    <div id = "list3" class = "lsts"></div>  
 
     </fieldset>
 
     </div>
     </form>
+
+
       </header>
-    
-  );
+
+    );
+
 }
 
 export default App;
