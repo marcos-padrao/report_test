@@ -1,12 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import {List} from './components/list';
+import React, {useState} from 'react';
+
+
+
 
 function App() {
+ 
+  const [Users, setUsers] = useState([]);
+
+  const [UserName, setUserName] = useState('');
+  const [UserPort, setUserPort] = useState('');
+  const [UserHost, setUserHost] = useState('');
+
+  function handleAddUser(){
+
+      if (UserName === '' || UserPort === '' || UserHost === '') {
+        alert ("Preencha os campos obrigatórios")
+        return;
+      }
+
+    const newUser = {
+      name: UserName,
+     host: UserHost,
+      port: UserPort,
+        time: new Date().toLocaleTimeString("pt-br", {
+        hour:'2-digit',
+        minute:'2-digit',
+      }) 
+    }
+   
+    setUsers (prevState => ([...prevState, newUser]));
+    
+  }  
+  
+    
 
     return (
       <header className="App-header">   
 
-     <form>
+      <form>
 
     <div id = "top"> 
     <div id = "rep">
@@ -31,57 +65,60 @@ function App() {
     <h2>Result</h2> 
     </div>
 
-    <fieldset id = 'boxes1' class = "camps">
+    <fieldset id = 'boxes1' className = "camps">
     <div id= "box1">
         <label for="name" id = "lbl">Name</label>
-        <input type="text" name="name" id="name" class = "input"></input>
+        <input required type="text" name="name" id="name" className = "input"
+        onChange={i => setUserName (i.target.value)}></input>
     </div>
 
     <div id = "box2">     
         <label for="nvt" id = "lbl" >Nvt OID</label>
-        <input type="text" name="nvt" id="nvt" class = "input"></input>
+        <input type="text" name="nvt" id="nvt" className = "input"></input>
     </div> <br></br>
 
     </fieldset>
 
-    <div id = "line2" class = "camps">
+    <div id = "line2" className = "camps">
     <div>
     <label for="host">Host</label>
-    <input type="text" name="host" id="host" class = "input"></input>
+    <input required type="text" name="host" id="host" className = "input"
+     onChange={e => setUserHost (e.target.value)}></input>
     </div>
 
     <div>
     <label for="port">Port</label>
-    <input type="text" name="port" id="port" class = "input1"></input>
+    <input required type="text" name="port" id="port" className = "input1"
+    onChange={a => setUserPort (a.target.value)}></input>
     </div>
 
     <div>
     <label for="cvss" >Cvss_base</label>
-    <input type="text" name="cvss" id="cvss" class = "input1"></input>
+    <input type="text" name="cvss" id="cvss" className = "input1"></input>
     </div>
 
     <div>
     <label for="theat">Threat</label>
-    <input type="text" name="theat" id="theat" class = "input1"></input>
+    <input type="text" name="theat" id="theat" className = "input1"></input>
     </div>
 
     <div>
     <label for="family">Family</label>
-    <input type="text" name="family" id="family" class = "input"></input>
+    <input type="text" name="family" id="family" className = "input"></input>
     </div>
     </div>
 
      <br></br>
 
-        <div id = "textareas" class = "camps">
+        <div id = "textareas" className = "camps">
         <div id = "dsc">
         <label for="description">Description</label>
-        <textarea name="description" id="description" class = "area"></textarea>
+        <textarea name="description" id="description" className = "area"></textarea>
         </div>
         
         <div id = "sol">
         <label for="solution">Solution</label>
-        <textarea name="solution" id="solution" class = "area"></textarea>
+        <textarea name="solution" id="solution" className = "area"></textarea>
         </div>
         </div>
      <br></br>
@@ -89,11 +126,11 @@ function App() {
 
         <div id = "buttons">
         <div id = "button1">
-        <button id = "remove" class = "btns">Remove</button>
+        <button id = "remove" className = "btns">Remove</button>
         </div>
 
         <div id = "button2">
-        <button id = "save" class = "btns">Save</button>
+        <button type='reset' id = "save" className = "btns" onClick={handleAddUser}>Save</button>
         </div>
         </div>
 
@@ -104,20 +141,26 @@ function App() {
 
     <fieldset id = "lists">
 
-    <div id = "list1" class = "lsts"></div>
-    <div id = "list2" class = "lsts"></div>
-    <div id = "list3" class = "lsts"></div>  
+  {
+     
+  }
 
+  {Users.map (User => <List name = {User.name} port = {User.port} host = {User.host} time = {User.time} />)
+  }
+
+  
     </fieldset>
 
     </div>
+  
     </form>
-
 
       </header>
 
     );
 
-}
-
+    }
+ 
 export default App;
+
+

@@ -1,0 +1,33 @@
+.lists {
+    display: flex;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(113, 113, 126, 0.178);
+    border-left: 1px rgb(245, 139, 0) solid;
+    margin-top: 5px;
+    padding: 10px 0px 5px 45px;
+
+}
+
+.visao {
+  
+   width: 115px;
+}
+
+#item1 {
+   
+    width: 140px;
+}
+
+
+#item3 {
+    margin-left: 50px;
+    width: 500px;
+   
+
+}
+
+#item4{
+    margin-left: 300px;
+    width: 50px;
+}

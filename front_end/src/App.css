@@ -38,7 +38,7 @@ form {
 }
 
 #buttona {
-    margin-left: 850px;
+    margin-left: 835px;
     margin-bottom: 10px;
 }
 
@@ -104,6 +104,12 @@ text-align: center;
 font-size: 14px;
 font-family: sans-serif;
 border-radius: 12px;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 #name {

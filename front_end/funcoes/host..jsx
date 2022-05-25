@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<p id="output"></p>
-
-<script>
-
     //funçoes que pegam os textos de cada tag <host> dentro do xml
 var read = new XMLHttpRequest();
 read.onreadystatechange = function() { {
@@ -20,16 +12,12 @@ var msg = ""  //variavél que irá receber os textos da tag <host> durante o loo
 function request(text) {
     for (let i =0; i<=5; i++){
     var day = text.responseXML;
-    var id = document.getElementById("output").innerHTML =
-    day.getElementsByTagName("host")[i].childNodes[0].nodeValue;
+    var id = day.getElementsByTagName("host")[i].childNodes[0].nodeValue;
     
-    msg = msg + id + '<br>'
+    msg = msg + id 
 }
 
 document.getElementById("output").innerHTML = msg  //colocando os valores desejados na tela
 
 }
-</script>
 
-</body>
-</html>
