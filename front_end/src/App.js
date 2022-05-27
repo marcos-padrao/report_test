@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import {List} from './components/list';
 import React, {useState} from 'react';
+
 
 
 
@@ -34,8 +34,8 @@ function App() {
     setUsers (prevState => ([...prevState, newUser]));
     
   }  
-  
-    
+
+
 
     return (
       <header className="App-header">   
@@ -49,11 +49,11 @@ function App() {
 
     
     <div id = "btta">
-    <button id = "buttona">Add new</button>
+    <button type='reset' id = "buttona" onClick={handleAddUser}>Add new</button>
     </div>
 
     <div>
-    <button id = "buttonb">Export json</button>
+    <button type = "button" id = "buttonb">Export json</button>
     </div>
 
     </div>
@@ -126,7 +126,7 @@ function App() {
 
         <div id = "buttons">
         <div id = "button1">
-        <button id = "remove" className = "btns">Remove</button>
+        <button type='reset' id = "remove" className = "btns" >Remove</button>
         </div>
 
         <div id = "button2">
@@ -147,7 +147,6 @@ function App() {
 
   {Users.map (User => <List name = {User.name} port = {User.port} host = {User.host} time = {User.time} />)
   }
-
   
     </fieldset>
 
@@ -162,5 +161,3 @@ function App() {
     }
  
 export default App;
-
-
